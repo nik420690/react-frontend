@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AdminDashboard from './AdminDashboard';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/products/';
+const API_URL = 'https://product-045e.onrender.com/products/';
 
 const ShowProducts = () => {
     const [products, setProducts] = useState([]);

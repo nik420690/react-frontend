@@ -14,7 +14,7 @@ function OrderConfirmation() {
 
         const postData = async () => {
             try {
-                const response = await axios.get(`http://localhost:3032/carts/user/${userId}`, {
+                const response = await axios.get(`https://cart-5tg9.onrender.com/carts/user/${userId}`, {
                     headers: getHeaders(),
                 });
 
@@ -31,13 +31,13 @@ function OrderConfirmation() {
                     "status": 'pending',
                 };
 
-                const postOrderResponse = await axios.post('https://localhost:44361/order/post/order', post_order, {
+                const postOrderResponse = await axios.post('https://order-ps5n.onrender.com/order/post/order', post_order, {
                     headers: getHeaders(),
                 });
 
                 if (postOrderResponse.status === 200) {
                     alert('Order successfully created');
-                    await axios.delete(`http://localhost:3032/carts/${data.id}`, {
+                    await axios.delete(`https://cart-5tg9.onrender.com/carts/${data.id}`, {
                         headers: getHeaders(),
                     });
                 } else {

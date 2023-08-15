@@ -20,7 +20,7 @@ function CreatePayment() {
             'Content-Type': 'application/json',
         };
         
-        axios.get(`http://localhost:3032/carts/user/${fetchedUserId}`, { headers })
+        axios.get(`https://cart-5tg9.onrender.com/carts/user/${fetchedUserId}`, { headers })
             .then(response => {
                 console.log("Cart response: ", response.data);
             });
@@ -36,7 +36,7 @@ function CreatePayment() {
         };
 
         try {
-            const response = await axios.post('http://localhost:3088/payments', {
+            const response = await axios.post('https://payment-yvbj.onrender.com/payments', {
                 user_id: userId,
                 type,
                 details,

@@ -28,7 +28,7 @@ const AddComments = () => {
   
     // Check if the userid exists before creating the comment
     axios
-      .get(`http://localhost:8000/users/${userid}`)
+      .get(`https://user-xojp.onrender.com/users/${userid}`)
       .then((response) => {
         // If the user exists, proceed to create the comment
         // Create a comment object with the form data
@@ -40,7 +40,7 @@ const AddComments = () => {
         console.log("User ID:", userid);
         // Make a POST request to create a new comment
         axios
-          .post('http://localhost:8001/comments/', comment)
+          .post('https://comment-187a.onrender.com/comments/', comment)
           .then((response) => {
             // Handle the response here if needed
             console.log('Comment created successfully:', response.data);

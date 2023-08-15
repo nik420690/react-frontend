@@ -52,7 +52,7 @@ const AddUser = () => {
 
     // Make a POST request to create a new user
     axios
-      .post('http://localhost:8000/users/', user)
+      .post('https://user-xojp.onrender.com/users/', user)
       .then((response) => {
         // If the user was created successfully, update the users state in the frontend
         setUsers([...users, response.data]);
@@ -62,7 +62,7 @@ const AddUser = () => {
         setName('');
         setSurname('');
         setType('user');
-        window.location.assign('http://localhost:4000/users');
+        window.location.assign('https://react-frontend-68tc.onrender.com/users');
       })
       .catch((error) => {
         console.error('Error creating user:', error);

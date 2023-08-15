@@ -14,7 +14,7 @@ const Users = () => {
   const handleSave = () => {
     // Send a PUT request to the backend to update the user
     axios
-      .put(`http://localhost:8000/users/${editedUser.id}`, editedUser)
+      .put(`https://user-xojp.onrender.com/users/${editedUser.id}`, editedUser)
       .then((response) => {
         console.log(response.data); // Log the success message from the backend if needed
         // Update the users state to reflect the changes
@@ -35,7 +35,7 @@ const Users = () => {
   useEffect(() => {
     // Fetch users data from the backend when the component mounts
     axios
-      .get('http://localhost:8000/users/') // Make a GET request using axios
+      .get('https://user-xojp.onrender.com/users/') // Make a GET request using axios
       .then((response) => setUsers(response.data)) // Extract the data from the response
       .catch((error) => console.error('Error fetching users:', error));
   }, []);
@@ -43,7 +43,7 @@ const Users = () => {
   const handleDelete = (id) => {
     // Send a DELETE request to the backend
     axios
-      .delete(`http://localhost:8000/users/${id}`)
+      .delete(`https://user-xojp.onrender.com/users/${id}`)
       .then((response) => {
         console.log(response.data); // Log the success message from the backend if needed
         // After successful deletion, update the users state to remove the deleted user from the list

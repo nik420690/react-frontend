@@ -8,7 +8,7 @@ const ShowOrders = () => {
   useEffect(() => {
     // Fetch orders data from the backend when the component mounts
     axios
-      .get('https://localhost:44361/order/get/All')
+      .get('https://order-ps5n.onrender.com/order/get/All')
       .then((response) => {
         console.log(response.data); // Log the API response to check the data structure
         setOrders(response.data);
@@ -19,7 +19,7 @@ const ShowOrders = () => {
   const handleDelete = (id) => {
     // Send a DELETE request to the backend
     axios
-      .delete(`https://localhost:44361/order/delete/byID?Id=${id}`)
+      .delete(`https://order-ps5n.onrender.com/order/delete/byID?Id=${id}`)
       .then((response) => {
         console.log(response.data); // Log the success message from the backend if needed
         // After successful deletion, update the orders state to remove the deleted order from the list

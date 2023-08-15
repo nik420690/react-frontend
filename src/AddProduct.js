@@ -24,7 +24,7 @@ const AddProduct = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Post the data to the API, localhost:3000/products
-    fetch('http://localhost:3000/products', {
+    fetch('https://product-045e.onrender.com/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

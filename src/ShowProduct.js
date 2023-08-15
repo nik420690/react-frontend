@@ -8,7 +8,7 @@ const ShowProduct = () => {
     const jwtTokenFromStorage = localStorage.getItem('jwtToken') || '';
 
     const fetchProducts = () => {
-        fetch('http://localhost:3000/products', {
+        fetch('https://product-045e.onrender.com/products', {
             headers: {
                 Authorization: `Bearer ${jwtTokenFromStorage}`,
             },
@@ -37,7 +37,7 @@ const ShowProduct = () => {
 
         const userId = localStorage.getItem('userId');
 
-        fetch('http://localhost:3032/carts/user/' + userId, {
+        fetch('https://cart-5tg9.onrender.com/carts/user/' + userId, {
             headers: {
                 Authorization: `Bearer ${jwtTokenFromStorage}`,
             },
@@ -49,7 +49,7 @@ const ShowProduct = () => {
                         products_id: [productId],
                     };
 
-                    return fetch('http://localhost:3032/carts', {
+                    return fetch('https://cart-5tg9.onrender.com/carts', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const ShowProduct = () => {
 
                     cartData.products_id.push(productId);
 
-                    return fetch('http://localhost:3032/carts/' + cartData._id, {
+                    return fetch('https://cart-5tg9.onrender.com/carts/' + cartData._id, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json',

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AdminDashboard from './AdminDashboard';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8001/comments/';
+const API_URL = 'https://comment-187a.onrender.com/comments/';
 
 const ShowComments = () => {
   const [comments, setComments] = useState([]);

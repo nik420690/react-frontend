@@ -10,7 +10,7 @@ const Cart = () => {
     const jwtTokenFromStorage = localStorage.getItem('jwtToken');
     axios.defaults.headers.common['Authorization'] = `Bearer ${jwtTokenFromStorage}`;
     
-    const API_BASE_URL = 'http://localhost:3032';
+    const API_BASE_URL = 'https://cart-5tg9.onrender.com';
 
     const fetchCartItems = async () => {
         try {
@@ -28,7 +28,7 @@ const Cart = () => {
 
             if (data && data.products_id) {
                 const cartItemsPromises = data.products_id.map(async (productId) => {
-                    const productResponse = await fetch(`http://localhost:3000/products/${productId}`, {
+                    const productResponse = await fetch(`https://product-045e.onrender.com/products/${productId}`, {
                         headers: {
                             Authorization: `Bearer ${jwtTokenFromStorage}`
                         }
@@ -111,7 +111,7 @@ const Cart = () => {
     const handleBuyItems = () => {
         console.log('Buying items:', cartItems);
         setCartItems([]);
-        window.location.href = 'http://localhost:4000/payment';
+        window.location.href = 'https://react-frontend-68tc.onrender.com/payment';
     };
 
     useEffect(() => {
