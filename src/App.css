@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.title {
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px 12px;
+  border: 1px solid #e1e1e1;
+}
+
+.table th {
+  background-color: #f5f5f5;
+}
+
+.date-input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
