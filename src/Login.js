@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
   
     try {
-      const loginResponse = await fetch('http://localhost:8000/login/', {
+      const loginResponse = await fetch('https://user-xojp.onrender.com/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const Login = () => {
   
         // Start of fetching from a protected route
         const token = localStorage.getItem('jwtToken');
-        const protectedResponse = await fetch('http://localhost:8000/me/', {
+        const protectedResponse = await fetch('https://user-xojp.onrender.com/me/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
