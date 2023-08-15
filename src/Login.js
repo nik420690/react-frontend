@@ -98,7 +98,7 @@ const Login = () => {
         <button type="submit" className="btn btn-primary">Login</button>
       </form>
       <div className="mt-3">
-        <p>Don't have an account? <a href="http://localhost:4000/register">Register here</a>!</p>
+        <p>Don't have an account? <a href="https://react-frontend-68tc.onrender.com/register">Register here</a>!</p>
       </div>
     </div>
   );

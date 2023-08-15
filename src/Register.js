@@ -60,7 +60,7 @@ const Register = () => {
       }
     
       // Registration successful, redirect to login page
-      window.location.href = 'http://localhost:4000/login';
+      window.location.href = 'https://react-frontend-68tc.onrender.com/login';
     } catch (error) {
       console.error('Error registering user:', error.message);
       // Handle error (e.g., show error message to the user)
@@ -131,7 +131,7 @@ const Register = () => {
         <button type="submit" className="btn btn-primary">Register</button>
       </form>
       <div className="mt-3">
-        <p>Already have an account? <a href="http://localhost:4000/login">Login here</a>!</p>
+        <p>Already have an account? <a href="https://react-frontend-68tc.onrender.com/login">Login here</a>!</p>
       </div>
     </div>
   );
